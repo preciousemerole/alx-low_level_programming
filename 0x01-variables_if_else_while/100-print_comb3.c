@@ -13,21 +13,19 @@
  */
 int main(void)
 {
-	int i, j;
+	int i;
+	int j;
 
-	for (i = 10; i <= 19; i++)
+	for (i = 48; i < 57; i++)
 	{
-		for (j = 10; j <= 19; j++)
+		for (j = i + 1; j < 58; j++)
 		{
-			if ((j % 10) > (i % 10))
+			putchar(i);
+			putchar(j);
+			if (i != 56 || j != 57)
 			{
-				putchar((i % 10) + '0');
-				putchar((j % 10) + '0');
-				if (i != 55 || j != 56)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}

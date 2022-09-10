@@ -5,6 +5,8 @@
  * starting from 0, followed by a new line
  * variable type char not allowed
  * use only putchar function
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {

@@ -4,8 +4,9 @@
  * _atoi - function that convert a string to an integer.
  * number in the string can be preceded by an infinite number of characters
  * take into account all the - and + signs before the number
- *@s: string to be converted
- * Return: 0 If there are no numbers in the string
+ * @s: string to be converted
+ *
+ * Return: the int converted from the string
  */
 int _atoi(char *s)
 {
@@ -26,13 +27,14 @@ int _atoi(char *s)
 	while (s[len] != '\0')
 		len++;
 
-	while (i < 0 && f == 0)
+	while (i < len && f == 0)
+	{
 		if (s[i] == '-')
 			++d;
 
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			digit = s[i] - 0;
+			digit = s[i] - '0';
 			if (d % 2)
 				digit = -digit;
 			n = n * 10 + digit;
@@ -42,9 +44,10 @@ int _atoi(char *s)
 			f = 0;
 		}
 		i++;
+	}
 
-		if (f == 0)
-			return (0);
+	if (f == 0)
+		return (0);
 
-		return (n);
+	return (n);
 }

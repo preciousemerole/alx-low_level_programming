@@ -10,26 +10,38 @@
  */
 int main(void)
 {
-	int [pass] = 100;
-	int i, sum, n;
+	int i, j, k, s;
 
-	sum = 0;
+	char c[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+	char p[58];
 
 	srand(time(NULL));
 
-	for (i = 0; i < 100; i++)
+	while (s != 2772)
 	{
-		pass[i] = rand() % 78;
-		sum += (pass([i] + '0');
-		putchar(pass[i] + '0');
-		
-		if ((2772 - sum) - '0' < 78)
+		i = k = s = 0;
+
+		while ((2772 -127) > s)
 		{
-			n = 2772 - sum - '0';
-			sum += n;
-			putchar(n + '0');
-			break;
+			j = rand() % 62;
+			p[i] = c[j];
+			s += c[j];
+			i++;
+		}
+		while  (c[k])
+		{
+			if (c[k] == (2772 - s))
+			{
+				p[i] = c[k];
+				s += c[k];
+				i++;
+				break;
+			}
+			k++;
 		}
 	}
-	return (0);
+	p[i] = '\0';
+	printf("%s", p);
+
+	return(0);
 }

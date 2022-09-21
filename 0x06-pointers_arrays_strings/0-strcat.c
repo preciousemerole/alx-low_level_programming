@@ -1,4 +1,4 @@
-#includes "main.h"
+#include "main.h"
 
 /**
  * *_strcat - concatenates two strings.
@@ -9,7 +9,7 @@
  * 
  * Return: resulting string dest
  */
-char *_strcat(char *dest, char *src);
+char *_strcat(char *dest, char *src)
 {
 	int i;
 	int j;

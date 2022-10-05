@@ -63,9 +63,9 @@ char *postfix_match(char *str, char *postfix)
 
 /**
  * wildcmp - compares two strings
- * and takes into account special characters
- * @s1:First string
- * @s2:Second string
+ * and takes into account wildcard characters
+ * @s1:First string to be compared
+ * @s2:Second string to be compared, may contain wildcards
  *
  * Return: 1 if the strings can be considered identical, otherwise return 0
  */
